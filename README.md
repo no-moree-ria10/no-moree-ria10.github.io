@@ -1,0 +1,1 @@
+# hakyll-for-github-pages
