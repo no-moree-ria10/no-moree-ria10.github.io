@@ -24,6 +24,9 @@ jobs:
           paths:
             - "/root/.stack"
             - ".stack-work"
+      - add_ssh_keys:
+          fingerprints:
+            - "a6:29:7d:c9:a3:4e:ac:c4:f7:3b:06:65:09:57:f4:db"
       - run:
           name: サイトの構築
           command: |
