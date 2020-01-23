@@ -1,3 +1,9 @@
+jobs:
+  build:
+    branches:
+      only:
+        - hakyll
+
 machine:
 
   ghc:
