@@ -28,13 +28,19 @@ jobs:
           fingerprints:
             - "07:37:8e:87:6d:0b:23:a3:87:0d:dd:8a:ed:bb:3b:6d"
       - run:
+          name: Configure SSH agent
+          command: |
+            cd ~/.ssh && ls -a
+            ssh-add -D
+            ssh-add ~/.ssh/id_rsa_somefingerprint
+      - run:
           name: submoduleの設定１
           command: |
             git submodule init
             git submodule update
 
       - run:
-          name: submoduleの設定１
+          name: submoduleの設定２
           command: |
             git submodule init
             git submodule update
