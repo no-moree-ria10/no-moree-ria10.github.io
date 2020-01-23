@@ -26,13 +26,22 @@ jobs:
             - ".stack-work"
       - add_ssh_keys:
           fingerprints:
-            - "a6:29:7d:c9:a3:4e:ac:c4:f7:3b:06:65:09:57:f4:db"
+            - "07:37:8e:87:6d:0b:23:a3:87:0d:dd:8a:ed:bb:3b:6d"
       - run:
-          name: サイトの構築
+          name: submoduleの設定１
           command: |
             git submodule init
             git submodule update
-            cd _site/ && git checkout master && cd ../
+
+      - run:
+          name: submoduleの設定１
+          command: |
+            git submodule init
+            git submodule update
+            cd ./_site/ && git checkout master && cd ../
+      - run:
+          name: サイトの構築
+          command: |
             ls -a
             stack build
             stack exec site build
