@@ -10,7 +10,7 @@ jobs:
       - checkout
       - run:
           name: 依存関係を解決・更新
-          commands: |
+          command: |
              cabal update
              cabal sandbox init
              cabal install --only-dependencies -j
@@ -18,30 +18,30 @@ jobs:
              cabal build
       - run:
           name: サイトの構築
-          commands:
-            - git submodule init
-            - git submodule update
-            - cd _site/ && git checkout master
-            - cabal run build
+          command: |
+             git submodule init
+             git submodule update
+             cd _site/ && git checkout master
+             cabal run build
       - run:
           name: サイトの構築
-          commands:
-            - git submodule init
-            - git submodule update
-            - cd _site/ && git checkout master
-            - cabal run build
+          command: |
+             git submodule init
+             git submodule update
+             cd _site/ && git checkout master
+             cabal run build
       - run:
           name: サイトの更新
-          commands:
-            - git config --global user.email circleci@circleci
-            - git config --global user.name CircleCI
-            - cd _site/ && git status
-            - cd _site/ && git add --all
-            - cd _site/ && git commit -m "Update (`date '+%F %T %Z'`) [ci skip]"
-            - cd _site/ && git push origin master
-            - git status
-            - git add _site/
-            - git commit -m "Update _site (`date '+%F %T %Z'`) [ci skip]"
-            - git push origin hakyll
+          command: |
+             git config --global user.email circleci@circleci
+             git config --global user.name CircleCI
+             cd _site/ && git status
+             cd _site/ && git add --all
+             cd _site/ && git commit -m "Update (`date '+%F %T %Z'`) [ci skip]"
+             cd _site/ && git push origin master
+             git status
+             git add _site/
+             git commit -m "Update _site (`date '+%F %T %Z'`) [ci skip]"
+             git push origin hakyll
 
 
