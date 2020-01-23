@@ -17,6 +17,7 @@ jobs:
           name: 依存関係を解決・更新
           command: |
             stack setup
+            stack build --only-dependencies
       - save_cache:
           name: 依存関係をキャッシュ
           key: cci-demo-haskell-v1-{{ checksum "hakyll-for-github-pages.cabal" }}-{{ checksum "stack.yaml" }}
