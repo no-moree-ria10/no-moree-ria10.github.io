@@ -37,8 +37,7 @@ jobs:
           name: submoduleの設定１
           command: |
             cd ./_site && ls -a && cd ../
-            git submodule init
-            git submodule update
+            git submodule update -i
 
       - run:
           name: submoduleの設定２
