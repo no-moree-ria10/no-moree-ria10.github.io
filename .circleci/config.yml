@@ -76,6 +76,6 @@ jobs:
              git status
              git add _site/
              git commit -m "Update _site (`date '+%F %T %Z'`) [ci skip]"
-             git push origin hakyll
+             git push origin HEAD:hakyll
 
 
