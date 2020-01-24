@@ -37,7 +37,6 @@ jobs:
       - run:
           name: submoduleの設定１
           command: |
-#            cd ./_site && ls -a && cd ../
             git submodule update -i --recursive
 
       - run:
