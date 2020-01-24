@@ -36,6 +36,9 @@ title: About
 * Cobol
 
 ### インフラ、ミドルウェアなど
+* Unity
+    * iOS教育アプリのプロジェクトに中期からジョイン
+    * 2Dゲーム・UI、Web通信周りを担当
 * AWS
     * 数人規模チームのIAM管理
     * SageMaker
