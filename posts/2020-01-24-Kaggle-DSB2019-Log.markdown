@@ -1,0 +1,11 @@
+---
+title: Kaggle DSB2019参加の記録（初参加初メダルになりたかった話）
+tags: Kaggle
+---
+
+# TL;DL;
+* kaggleに[DSB2019](<https://www.kaggle.com/c/data-science-bowl-2019>)に初参加した
+* publicLBでは最終日前日にブロンズ圏内に入ったが、その後圏外→shake downという散々な結果に終わった
+* deepなモデルが勾配ブースティング木に勝つには難しいことが分かった
+* 弊社では教育アプリの開発、データ分析、機械学習エンジニアを求めています。DMください。
+
