@@ -44,10 +44,10 @@ jobs:
             touch ~/.ssh/config
             echo -e "Host github.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 
-      - add_ssh_keys:
-          fingerprints:
-            - "07:37:8e:87:6d:0b:23:a3:87:0d:dd:8a:ed:bb:3b:6d"
-            - "a6:29:7d:c9:a3:4e:ac:c4:f7:3b:06:65:09:57:f4:db"
+#      - add_ssh_keys:
+#          fingerprints:
+#            - "07:37:8e:87:6d:0b:23:a3:87:0d:dd:8a:ed:bb:3b:6d"
+#            - "a6:29:7d:c9:a3:4e:ac:c4:f7:3b:06:65:09:57:f4:db"
       - run:
           name: submoduleの設定１
           command: |
