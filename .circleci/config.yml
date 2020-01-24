@@ -40,7 +40,7 @@ jobs:
           name: ssh configの設定
           command: |
             mkdir ~/.ssh
-            chmod 700 .ssh
+            chmod 700 ~/.ssh
             touch ~/.ssh/config
             echo -e "Host github.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 
