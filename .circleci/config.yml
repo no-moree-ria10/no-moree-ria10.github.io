@@ -32,7 +32,8 @@ jobs:
       - run:
           name: sshのインストール
           command: |
-            yum install openssh-clients
+            apt-get install ssh
+            systemctl start sshd
       - add_ssh_keys:
           fingerprints:
             - "07:37:8e:87:6d:0b:23:a3:87:0d:dd:8a:ed:bb:3b:6d"
