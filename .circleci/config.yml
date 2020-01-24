@@ -34,9 +34,16 @@ jobs:
           command: |
             apt-get update
             apt-get -y install ssh
-            ssh -o "StrictHostKeyChecking=no"
-#            echo -e "Host github.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
+#            ssh -o "StrictHostKeyChecking=no"
 #            systemctl start sshd
+      - run:
+          name: ssh configの設定
+          command: |
+            mkdir ~/.ssh
+            chmod 700 .ssh
+            touch ~/.ssh/config
+            echo -e "Host github.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
+
       - add_ssh_keys:
           fingerprints:
             - "07:37:8e:87:6d:0b:23:a3:87:0d:dd:8a:ed:bb:3b:6d"
