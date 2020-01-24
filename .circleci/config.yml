@@ -34,7 +34,8 @@ jobs:
           command: |
             apt-get update
             apt-get -y install ssh
-            echo -e "Host github.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
+            ssh -o "StrictHostKeyChecking=no"
+#            echo -e "Host github.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 #            systemctl start sshd
       - add_ssh_keys:
           fingerprints:
