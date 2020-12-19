@@ -24,8 +24,8 @@ tags: Kaggle
     * このハイスコアカーネルが地雷？だったらしく、big shake downした
 * 自前モデルは前処理なしのMulti-Head Attention(rnn, cnnを一部含む）だった
 
-### 最終的な活動ログ
-![](../../images/kaggle_activity.png) 
+### submit
+![](../images/kaggle_activity.png)
 * 典型的な最後に焦るタイプでした
 
 
